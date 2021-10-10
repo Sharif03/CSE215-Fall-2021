@@ -3,6 +3,7 @@ import java.util.Scanner;
 // Adib Khalid Jim Yash
 // Adib is writing
 // Jim is writing
+// Khalid is writing
 
 public class PrintfAndScanOfJava {
 
