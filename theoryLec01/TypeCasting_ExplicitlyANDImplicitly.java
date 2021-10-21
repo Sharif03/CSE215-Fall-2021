@@ -20,7 +20,7 @@ public class TypeCasting_ExplicitlyANDImplicitly {
 		
 		
 		short a = 10;      // Short = 2 byte 
-		byte b = (byte)a;  // Byte = 1 byte
+		byte b = (byte)a;  // Byte = 1 byte   // Explicitly 
 		
 		
 		int aa = 20;           // Int = 4 byte(32 bit)      
@@ -35,8 +35,8 @@ public class TypeCasting_ExplicitlyANDImplicitly {
 		
 		
 		int aaa = 10;   // Int   = 4 byte
-		float f = aaa;  // Float = 4 byte  
-		aaa = (int)f;
+		float floatValue = aaa;  // Float = 4 byte  
+		aaa = (int)floatValue;
 		  
 		double dd = 23.3;       // Double = 8 byte
 		float fff = (float)dd;  // Float = 4 byte 
@@ -54,7 +54,11 @@ public class TypeCasting_ExplicitlyANDImplicitly {
 		bValue = (byte)fValue;	
 		
 		byte xx = 5; //00000101
-		byte zz = (byte)(xx + 5);   //00000000000000000000000000000101
+		byte yy = 2;
+		byte pp = (byte)(xx + yy);   //00000000000000000000000000000101
+		short ssss = 2;
+		ssss = (short)(ssss + 2);
+		
 	}
 
 }

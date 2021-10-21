@@ -29,5 +29,6 @@ public class ScopeAndLifetimeForVariable {
 		// z = 56; // error
 		// System.out.println(z); // error
 	}
+	
 
 }

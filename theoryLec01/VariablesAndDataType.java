@@ -44,7 +44,7 @@ public class VariablesAndDataType {
 		
 		
 		// User defined Object Type: String
-		String str = "Hell1+oS!";  // 9*2 = 18 byte [18*8 =144 Bit]
+		String str = "Hell1+oS! hh";  // 13*2 = 26 byte [26*8 = 208 Bit]
 		
 		byte byteType = (byte)1000;   // 2^8  = 256 [-128 -1=>negative number] [0-127=> positive number] // -128 to +127
 		System.out.println(byteType);

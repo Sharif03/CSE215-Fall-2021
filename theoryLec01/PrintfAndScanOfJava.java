@@ -1,4 +1,5 @@
 package theoryLec01;
+
 import java.util.Scanner;
 
 public class PrintfAndScanOfJava {
