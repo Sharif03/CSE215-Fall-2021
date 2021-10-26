@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package codeJamming;
+=======
+
+>>>>>>> ccc8c9264d8c17ab27a0ee17a25461388d6e440a
 
 import java.util.Scanner;
 public class MethodsBasics {
@@ -20,6 +24,7 @@ public class MethodsBasics {
 		System.out.println("please enter the withraw amount");
 		int withd= in.nextInt();
 		
+<<<<<<< HEAD
 		balance=withdaw(balance, withd);
 		checkBalance(balance);
 		
@@ -37,6 +42,16 @@ public class MethodsBasics {
 	}
 	
 	
+=======
+		balance=withdaw(withd,balance);
+		checkBalance(balance);
+		System.out.println("end of program");
+		
+		//boolean elig;
+		
+	}
+	
+>>>>>>> ccc8c9264d8c17ab27a0ee17a25461388d6e440a
 	//defining a method
 	public static void checkBalance(int balance) {
 		System.out.println("your balance is:"+balance);
@@ -47,6 +62,7 @@ public class MethodsBasics {
 		return balan;
 	}
 	
+<<<<<<< HEAD
 	
 	//at this point you can define withdraw method
 	/*you will take withdraw amount from user
@@ -54,6 +70,9 @@ public class MethodsBasics {
 	 * do not forget the conditions for withdrae
 	 */
 	public static int withdaw(int balan, int withd){
+=======
+	public static int withdaw(int withd, int balan){
+>>>>>>> ccc8c9264d8c17ab27a0ee17a25461388d6e440a
 		if (withd<balan && withd>=0) {
 			balan = balan - withd;
 		}
@@ -63,10 +82,21 @@ public class MethodsBasics {
 		return balan;
 	}
 		
+<<<<<<< HEAD
 	
 	
 	/*
 	 * Think about a EligibilityOftakingLoanMethod
+=======
+	//at this point you can define withdraw method
+	/*you will take withdraw amount from user
+	 * pass that through parameter and then update balance
+	 * do not forget the conditions for withdrae
+	 */
+	
+	/*
+	 * Think about a EgibilityOftakingLoanMethod
+>>>>>>> ccc8c9264d8c17ab27a0ee17a25461388d6e440a
 	 * 1. You need balance greater than 50,000
 	 * 2. You need to have a salary of minimum 30,000
 	 * if you can fulfill these conditions then you will
@@ -81,12 +111,15 @@ public class MethodsBasics {
 	 * 
 	 * public static boolean methodname(parameterlist)
 	 */
+<<<<<<< HEAD
 	public static boolean eligibilityOftakingLoanMethod(int balence, int salary) {
 		if(balence>50000 && salary>=30000)
 			return true;
 		else
 			return false;
 	}
+=======
+>>>>>>> ccc8c9264d8c17ab27a0ee17a25461388d6e440a
 	
 
 }
