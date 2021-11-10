@@ -1,7 +1,6 @@
 package theoryLec07;
 
 import java.util.Scanner;
-
 public class PersonDriver {
 
 	public static void main(String[] args) {
@@ -14,6 +13,16 @@ public class PersonDriver {
 
 class Person{
 	private String name;
+	private String contactNumber;
+	
+	public Person() {
+		
+	}
+	public Person(String name, String contactNumber){
+		setName(name);
+		this.contactNumber = contactNumber;
+	}
+	
 	public void setName(String name) {
 		String[] acceptedList = new String[]{"Adib", "Jim", "Yash", "Fahim"};
 		for (int i = 0; i < acceptedList.length; i++) {
@@ -25,19 +34,10 @@ class Person{
 		return name;
 	}
 	
-	private String contactNumber;
 	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 	public String getContactNumber() {
 		return contactNumber;
-	}
-	
-	public Person() {
-		
-	}
-	public Person(String name, String contactNumber){
-		setName(name);
-		this.contactNumber = contactNumber;
 	}
 }
