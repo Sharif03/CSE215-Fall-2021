@@ -6,11 +6,10 @@ public class AccountHolder {
 	public int acc_num;
 	public String name;
 	public int balance;
-	public Loan l;
 	public Nominee n;
+	public Loan l;
 	public static int objectAccountNumber = 100;
 	
-	// AccountHolder(){}
 	AccountHolder() {
 		balance = 0;
 		acc_num = ++objectAccountNumber;
@@ -18,7 +17,7 @@ public class AccountHolder {
 	}
 	
 	AccountHolder(String name, int balance){
-		this.acc_num =  ++objectAccountNumber; // (int)(Math.random() * 10000);
+		this.acc_num =  ++objectAccountNumber; 
 		this.name = name;
 		this.balance = balance;
 	}
@@ -38,14 +37,29 @@ public class AccountHolder {
 			System.out.println("you do not have sufficient balance");	
 	}
 	
-	// Method 1[Loan]
-	// Method 2[Loan]
-	// Method 3[Nominee]
+	public void elgibleForLoan() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Slary: ");
+		int salary = input.nextInt();
+		boolean r = l.isEligible(salary);
+		System.out.println("Eligible for loan: " + r);
+	}
+	
+	public void grantLoanAmmountOnBalance() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Slary: ");
+		int salary = input.nextInt();
+		int r = l.amountgranted(salary, balance);
+		System.out.println("Eligible for loan Ammount: " + r);
+	}
+	
 	public void nomineeInfo() {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter Name: ");
+		System.out.println("Enter Nominee Name: ");
 		String name = input.nextLine();
+		System.out.println("Enter Nominee Age: ");
 		int age = input.nextInt();
+		System.out.println("Enter Nominee Relation with Accont Holder: ");
 		String relationship = input.nextLine();
 		n = new Nominee();
 		n.setinfo(name, age, relationship);

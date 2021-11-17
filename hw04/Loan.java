@@ -10,20 +10,20 @@ public class Loan {
 		this.salary = salary;
 	}
 	
-	public boolean isEligible() {
+	public boolean isEligible(int salary) {
 		if(salary > 50000) 
 			return true;
 		else 
 			return false;
-	}	
+	}
 	
-	public int amountgranted(int salary) {
-		if(isEligible()) {
-			if(salary > 100000) {
+	public int amountgranted(int salary, int balance) {
+		if(isEligible(salary)) {
+			if(salary > 100000 && balance>100000) {
 				limit = 500000;
 				return limit;
 			}
-			else if(salary > 60000){
+			else if(salary > 60000 && balance>60000){
 				limit = 300000;
 				return limit;
 			}

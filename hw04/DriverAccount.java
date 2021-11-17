@@ -28,8 +28,8 @@ public class DriverAccount {
 		}
 		for(AccountHolder a : bank) {
 			System.out.println(a);
-			a.checkMyEligibilityForLoan();
-			a.showMyNomineeDetails();
+			a.elgibleForLoan();
+			a.nomineeInfo();
 		}
 		
 
