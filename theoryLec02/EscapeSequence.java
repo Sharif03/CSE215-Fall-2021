@@ -8,9 +8,7 @@ public class EscapeSequence {
 		System.out.println("Hello, this is our \"java class\"  ");
 		
 		System.out.println("\"\tHello World\"");
-		                
-		
-		
+		             
 
 	}
 

@@ -30,7 +30,7 @@ class Box{
 		this.length = length;
 		this.depth = depth;	
 	}
-	public void compareTo(Box b) {
+	private void compareTo(Box b) {
 		if (this.height > b.height) {
 			System.out.println("Max height is: " + this.height);
 		}
@@ -39,8 +39,8 @@ class Box{
 		}
 	}
 	public Box objectCreation(Box b) {  // 4 3 7
-		Box box = new Box(b.height+1, b.length+3, b.depth-1);  // 5 6 6
-		return box;
+		//Box box = new Box(b.height+1, b.length+3, b.depth-1);  // 5 6 6
+		return new Box(b.height+1, b.length+3, b.depth-1);
 	}
 	
 }

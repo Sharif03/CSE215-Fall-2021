@@ -20,7 +20,7 @@ public class RandomNumberGenerator {
 		
 		
 		// Random number in normal mood(Double type)
-		// 0.650771291935203 * 100
+		// 0.650771291935203 
 		// 0.5273759342194437
 		// 0.7587023132553588
 		

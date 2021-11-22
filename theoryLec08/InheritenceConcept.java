@@ -14,11 +14,13 @@ class Person{
 	String name;
 	String id;
 	String mobileNumber;
-	
 	public Person(String name, String id, String mobileNumber) {
 		this.name = name;
 		this.id = id;
 		this.mobileNumber = mobileNumber;
+	}
+	public String personInfo(String name) {
+		return name;
 	}
 	public void personInfo() {
 		System.out.println("Name" + name + " ID: " + id + " Mobile Number: " + mobileNumber);

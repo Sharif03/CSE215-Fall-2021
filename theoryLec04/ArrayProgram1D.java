@@ -12,7 +12,7 @@ public class ArrayProgram1D {
 		int a[] = new int[range];  // 5
 		
 		for (int i = 0; i < a.length; i++) {
-			a[i] =(int)(Math.random() * 100);
+			a[i] = input.nextInt();//(int)(Math.random() * 100);
 		}
 		
 		int sum = 0;
