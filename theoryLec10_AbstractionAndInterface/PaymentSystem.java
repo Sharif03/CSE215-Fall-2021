@@ -1,7 +1,6 @@
 package theoryLec10_AbstractionAndInterface;
 
 import java.util.Scanner;
-
 public class PaymentSystem {
 
 	public static void main(String[] args) {
@@ -9,8 +8,9 @@ public class PaymentSystem {
 		Bkash b = new Bkash();
 		Rocket r = new Rocket();
 		VisaCard v = new VisaCard();
-		MarchentCard m = new MarchentCard();
-		PaymentManager p;
+		MarchentCard m = new MarchentCard(); 
+		MasterCard mm = new MasterCard();
+		PaymentManager payment;
 		
 		System.out.println("Choose your payment method");
 		System.out.println("Payment Menu: ");
@@ -18,19 +18,23 @@ public class PaymentSystem {
 		System.out.println("2. Rocket");
 		System.out.println("3. VisaCard");
 		System.out.println("4. MarchentCard");
+		System.out.println("5. MasterCard");
+		
 		
 		System.out.print("Option: ");
 		int option = input.nextInt();
 		if(option == 1)
-			p = new PaymentManager(b);
+			payment = new PaymentManager(b);
 		else if(option == 2)
-			p = new PaymentManager(r);
+			payment = new PaymentManager(r);
 		else if(option ==3)
-			p = new PaymentManager(v);
+			payment = new PaymentManager(v);
+		else if(option ==4)
+			payment = new PaymentManager(m);
 		else
-			p = new PaymentManager(m);
+			payment = new PaymentManager(mm);
 		
-		p.paymentAccept();
+		payment.paymentAccept();
 				
 	}
 }
@@ -39,12 +43,12 @@ interface Payment {
 	void doPayment();
 }
 class PaymentManager{
-	private Payment p;
-	public PaymentManager(Payment p){
-		this.p = p;
+	private Payment pay;
+	public PaymentManager(Payment pay){
+		this.pay = pay;
 	}
 	public void paymentAccept() {
-		p.doPayment();
+		pay.doPayment();
 	}
 }
 
@@ -66,6 +70,11 @@ class VisaCard implements Payment{
 class MarchentCard implements Payment{
 	public void doPayment() {
 		System.out.println("Payment done by Marchent Card");
+	}
+}
+class MasterCard implements Payment{
+	public void doPayment() {
+		System.out.println("Payment done by Master Card");
 	}
 }
 
